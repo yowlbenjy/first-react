@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { Fragment, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -9,10 +9,29 @@ root.render(
   <MainContent />
 )
 
+
+function Header () {
+  return(
+    <header>
+    <img />
+  </header>
+  )
+}
+
+function Footer (){
+  return (
+    <footer>
+    <small>Created with heart in New York</small>
+  </footer>
+  )
+}
+
 function MainContent() {
   return (
-    <div>
-      <img />
+    <>
+      <Header/>
+
+      <main>
       <h1>Fun facts about react</h1>
       <ul>
         <li>Released in 2013</li>
@@ -21,7 +40,12 @@ function MainContent() {
         <li>Maintained by Meta</li>
         <li>Building block of modern web</li>
       </ul>
-    </div>
+      </main>
+      
+      <Footer/>
+    </>
   )
 }
+
+
 
